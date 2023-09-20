@@ -27,7 +27,7 @@ component "<$master>BackEnd" {
 front1 <--> ing1 : REST
 
 ing1 <-u-> apigw1 : gRPC
-apigw1 <-> oidc1 : REST
+apigw1 <-> oidc1 : OAuth2
 oidc1 <-r-> oidcdb1 : SQL
 
 
