@@ -1,0 +1,43 @@
+@startuml
+!include <kubernetes/k8s-sprites-unlabeled-25pct>
+!include <logos/kafka>
+!include <cloudinsight/apache>
+!include <cloudinsight/postgresql>
+!include <cloudinsight/keycloak>
+
+left to right direction
+
+[Frontend] as front1
+component "<$master>BackEnd" {
+  port "APISIX ingress" as ing1
+  [<$apache>\nAPISIX] as apigw1
+  [<$keycloak>\nKeycloak] as oidc1
+
+  [<$kafka>] as bus1
+
+  [<$pod>\nMicroservice_1] as ms1
+  database "<$postgresql>\nPostgres" as ps1
+  [<$pod>\nMicroservice_2] as ms2
+  database "<$postgresql>\nPostgres" as ps2
+
+  [OPA]
+}
+
+front1 <--> ing1 : REST
+
+ing1 <--> apigw1 : gRPC
+apigw1 <-r-> oidc1 : REST
+
+
+
+apigw1 <--> ms1 : REST
+ms1 <--> bus1 : kafka
+ms1 <-l-> ps1 : SQL
+
+
+apigw1 <--> ms2 : REST
+ms2 <--> bus1 : kafka
+ms2 <-r-> ps2 : SQL
+
+ms1 <-> ms2 : gRPC or REST
+@enduml
