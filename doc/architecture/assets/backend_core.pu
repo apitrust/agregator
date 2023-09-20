@@ -12,6 +12,7 @@ component "<$master>BackEnd" {
   port "APISIX ingress" as ing1
   [<$apache>\nAPISIX] as apigw1
   [<$keycloak>\nKeycloak] as oidc1
+  database "<$postgresql>\nPostgres" as oidcdb1
 
   [<$kafka>] as bus1
 
@@ -19,21 +20,21 @@ component "<$master>BackEnd" {
   database "<$postgresql>\nPostgres" as ps1
   [<$pod>\nMicroservice_2] as ms2
   database "<$postgresql>\nPostgres" as ps2
-
-  [OPA]
+  [OPA] as opa1
+  [OPA] as opa2
 }
 
 front1 <--> ing1 : REST
 
-ing1 <--> apigw1 : gRPC
-apigw1 <-r-> oidc1 : REST
-
+ing1 <-u-> apigw1 : gRPC
+apigw1 <-> oidc1 : REST
+oidc1 <-r-> oidcdb1 : SQL
 
 
 apigw1 <--> ms1 : REST
 ms1 <--> bus1 : kafka
 ms1 <-l-> ps1 : SQL
-
+ms1 <-l-> opa2
 
 apigw1 <--> ms2 : REST
 ms2 <--> bus1 : kafka
