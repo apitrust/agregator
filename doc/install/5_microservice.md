@@ -1,4 +1,4 @@
-Microservice 1
+Microservice 1 - HTTP-HTTPS-Echo server
 ```
 kubectl run httpecho --image=mendhak/http-https-echo --labels="app=httpecho"
 kubectl create service clusterip httpecho --tcp=8080:8080
