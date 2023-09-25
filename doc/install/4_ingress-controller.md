@@ -15,6 +15,7 @@ spec:
        - serviceName: httpecho
          servicePort: 8080
 EOF
-
+```
+```
 kubectl port-forward -n apisix svc/apisix-gateway --address 0.0.0.0 80
 ```
