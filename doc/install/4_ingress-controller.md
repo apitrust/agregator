@@ -17,7 +17,7 @@ spec:
 EOF
 ```
 ```
-kubectl apply -n -f - <<EOF
+kubectl apply -n keycloak -f - <<EOF
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
