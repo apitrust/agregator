@@ -8,3 +8,6 @@ helm install auth oci://registry-1.docker.io/bitnamicharts/keycloak \
   --set auth.adminPassword=${ADMIN_PASSWORD} \
   --set proxy=edge
 ```
+```
+kubectl port-forward svc/auth-keycloak --address 0.0.0.0 80
+```
