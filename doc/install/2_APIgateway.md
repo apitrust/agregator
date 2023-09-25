@@ -19,4 +19,5 @@ helm install apisix-ingress-controller charts/apisix-ingress-controller --namesp
 
 unset APISIX_ADMIN_KEY
 unset APISIX_VIEWER_KEY
+
 ```
