@@ -21,16 +21,16 @@ kubectl apply -n keycloak -f - <<EOF
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
-  name: httpecho1-route
+  name: keycloak1-route
 spec:
   http:
-  - name: httpecho1
+  - name: keycloak1
     match:
       paths:
-      - /echo
+      - /keycloak
     backends:
-       - serviceName: httpecho
-         servicePort: 8080
+       - serviceName: auth-keycloak
+         servicePort: 80
 EOF
 ```
 ```
