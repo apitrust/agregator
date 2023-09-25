@@ -4,10 +4,10 @@ kubectl apply -f - <<EOF
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
-  name: httpserver-route
+  name: httpecho1-route
 spec:
   http:
-  - name: rule1
+  - name: httpecho1
     match:
       paths:
       - /echo
