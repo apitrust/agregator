@@ -12,6 +12,7 @@ helm install apisix charts/apisix --create-namespace --namespace apisix \
   --set admin.credentials.viewer=${APISIX_VIEWER_KEY}
 
 helm install apisix-ingress-controller charts/apisix-ingress-controller --namespace apisix \
+  --set config.apisix.adminKey=${APISIX_ADMIN_KEY} \
   --set config.apisix.serviceNamespace=apisix \
   --set config.apisix.clusterName=cluster.local \
   --set config.apisix.adminAPIVersion=v3
