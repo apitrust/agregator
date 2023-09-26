@@ -26,5 +26,6 @@ spec:
         client_secret: ${KC_CLIENT_SECRET}
         discovery: ${KC_DISCOVERY_ENDPOINT}
         realm: ${KC_REALM}
+        redirect_uri: "https://f09ab68a-0bef-4af0-899b-a837441c10f9-10-244-3-224-80.spch.r.killercoda.com/echo-auth"
 EOF
 ```
