@@ -15,6 +15,7 @@ spec:
     match:
       paths:
       - /echo-auth
+      - /echo-auth/*
     backends:
        - serviceName: httpecho
          servicePort: 8080
@@ -26,7 +27,7 @@ spec:
         client_secret: ${KC_CLIENT_SECRET}
         discovery: ${KC_DISCOVERY_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: /echo-auth
+        redirect_uri: /echo-auth/redirect_uri
         access_token_in_authorization_header: true
         ssl_verify: false
 EOF
