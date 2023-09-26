@@ -1,4 +1,8 @@
 ```
+KC_CLIENT_ID=
+KC_CLIENT_SECRET=
+KC_DISCOVERY_ENDPOINT=
+
 kubectl apply -f - <<EOF
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
