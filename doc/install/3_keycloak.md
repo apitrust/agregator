@@ -10,5 +10,5 @@ helm install auth oci://registry-1.docker.io/bitnamicharts/keycloak -n keycloak 
 
 ```
 ```
-kubectl port-forward svc/auth-keycloak --address 0.0.0.0 80
+kubectl port-forward -n keycloak svc/auth-keycloak --address 0.0.0.0 80
 ```
