@@ -28,5 +28,6 @@ spec:
         realm: ${KC_REALM}
         redirect_uri: /echo-auth
         access_token_in_authorization_header: true
+        ssl_verify: false
 EOF
 ```
