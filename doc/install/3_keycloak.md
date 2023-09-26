@@ -1,4 +1,4 @@
-Keycloak
+Keycloak (need HELM > 3.9)
 ```
 ADMIN_USER=user
 ADMIN_PASSWORD=ADMIN123
