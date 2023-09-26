@@ -25,7 +25,6 @@ spec:
         client_id: ${KC_CLIENT_ID}
         client_secret: ${KC_CLIENT_SECRET}
         discovery: ${KC_DISCOVERY_ENDPOINT}
-        bearer_only: false
         realm: ${KC_REALM}
 EOF
 ```
