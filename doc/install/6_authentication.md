@@ -1,7 +1,7 @@
 ```
-KC_CLIENT_ID=
-KC_CLIENT_SECRET=
-KC_DISCOVERY_ENDPOINT=
+KC_CLIENT_ID=apisix1
+KC_CLIENT_SECRET=Xpx9FYacA2o7O5RTsP62a7pQOou5nzqv
+KC_DISCOVERY_ENDPOINT=http://auth-keycloak.keycloak.svc.cluster.local/realms/apisix/.well-known/openid-configuration
 
 kubectl apply -f - <<EOF
 apiVersion: apisix.apache.org/v2
