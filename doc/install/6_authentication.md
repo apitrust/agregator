@@ -19,7 +19,7 @@ spec:
   - name: httpecho1-auth
     match:
       paths:
-      - /auth
+      - /*
     backends:
     - serviceName: httpecho
       servicePort: 8080
