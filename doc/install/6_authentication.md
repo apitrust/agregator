@@ -1,6 +1,6 @@
 ```
 URI=https://e80f6094-fb56-47ed-ab3b-89a9d2d7ff02-10-244-4-251-80.spch.r.killercoda.com
-LOCAL_URI=http://auth-keycloak.keycloak.cluster.local
+LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
 KC_CLIENT_SECRET=eqRxjnONoSlS4nohgsHo5V1d43FCkRCv
