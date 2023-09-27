@@ -32,7 +32,7 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        access_token_in_authorization_header: true
+        bearer_only: true
         redirect_uri: "/redirect_uri"
 EOF
 
