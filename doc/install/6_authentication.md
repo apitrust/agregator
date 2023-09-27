@@ -32,7 +32,7 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: ${URI}/callback
+        redirect_uri: ${URI}/redirect_uri
 EOF
 
 ```
