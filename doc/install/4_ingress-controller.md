@@ -27,7 +27,9 @@ spec:
   - name: keycloak1
     match:
       paths:
-      - /*
+      - /admin/*
+      - /resources/*
+      - /realms/*
     backends:
        - serviceName: auth-keycloak
          servicePort: 80
