@@ -19,7 +19,7 @@ spec:
   - name: httpecho1-auth
     match:
       paths:
-      - /*
+      - /auth
       - /redirect_uri
     backends:
     - serviceName: auth-keycloak
