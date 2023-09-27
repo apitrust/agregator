@@ -15,6 +15,9 @@ spec:
     match:
       paths:
       - /auth
+    backends:
+    - serviceName: httpecho
+      servicePort: 8080
     plugins:
     - name: openid-connect
       enable: true
