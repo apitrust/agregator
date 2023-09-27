@@ -9,7 +9,7 @@ KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 
 ```
 ```
-kubectl apply -f - <<EOF
+kubectl apply -n apisix -f - <<EOF
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
