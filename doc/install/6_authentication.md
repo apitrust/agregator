@@ -21,7 +21,7 @@ spec:
       paths:
       - /*
     backends:
-    - serviceName: httpecho
+    - serviceName: auth-keycloak
       servicePort: 8080
     plugins:
     - name: openid-connect
