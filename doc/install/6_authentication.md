@@ -4,8 +4,8 @@ LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
 KC_CLIENT_SECRET=eqRxjnONoSlS4nohgsHo5V1d43FCkRCv
-KC_DISCOVERY_ENDPOINT=${LOCAL_URI}/realms/apisix/.well-known/openid-configuration
-KC_TOKEN_ENDPOINT=${LOCAL_URI}/realms/apisix/protocol/openid-connect/token
+KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
+KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 ```
 ```
 kubectl apply -f - <<EOF
