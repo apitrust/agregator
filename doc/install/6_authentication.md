@@ -30,7 +30,6 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: ${URI}
 EOF
 
 ```
@@ -57,7 +56,6 @@ spec:
         client_secret: ${KC_CLIENT_SECRET}
         discovery: ${KC_DISCOVERY_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: ${URI}/echo
         ssl_verify: false
 EOF
 
