@@ -27,6 +27,7 @@ spec:
   - name: keycloak1
     match:
       paths:
+      - /
       - /admin/*
       - /resources/*
       - /realms/*
