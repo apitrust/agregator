@@ -3,7 +3,7 @@ URI=https://38613ce3-12cc-4c0e-a13e-184a349e7578-10-244-0-248-80.spch.r.killerco
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
 KC_CLIENT_SECRET=6nZTyezkfYM1YdiVuknMdmhzv1PDdej0
-KC_DISCOVERY_ENDPOINT=https://${URI}/realms/apisix/.well-known/openid-configuration
+KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 ```
 ```
