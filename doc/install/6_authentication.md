@@ -53,7 +53,7 @@ spec:
   - name: http-authz1
     match:
       paths:
-      - /auth
+      - /authz
     backends:
     - serviceName: httpecho
       servicePort: 8080
