@@ -22,7 +22,7 @@ spec:
       - /auth
       - /redirect_uri
     backends:
-    - serviceName: auth-keycloak
+    - serviceName: echo
       servicePort: 80
     plugins:
     - name: openid-connect
