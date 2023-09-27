@@ -22,7 +22,7 @@ spec:
       - /*
     backends:
     - serviceName: auth-keycloak
-      servicePort: 8080
+      servicePort: 80
     plugins:
     - name: openid-connect
       enable: true
