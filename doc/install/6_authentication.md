@@ -22,7 +22,7 @@ spec:
       - /auth
       - /redirect_uri
     backends:
-    - serviceName: echo
+    - serviceName: httpecho
       servicePort: 80
     plugins:
     - name: openid-connect
