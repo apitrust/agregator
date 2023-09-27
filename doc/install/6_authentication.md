@@ -32,7 +32,6 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: /redirect_uri
 EOF
 
 ```
