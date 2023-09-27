@@ -33,7 +33,7 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: /redirect
+        redirect_uri: https://127.0.0.1:9080/redirect_uri
     - name: file-logger
       enable: true
       config:
