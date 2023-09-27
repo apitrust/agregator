@@ -55,6 +55,8 @@ spec:
       paths:
       - /auth
     backends:
+    - serviceName: httpecho
+      servicePort: 8080
     plugins:
     - name: authz-keycloak
       enable: true
