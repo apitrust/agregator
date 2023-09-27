@@ -20,6 +20,7 @@ spec:
     match:
       paths:
       - /*
+      - /redirect_uri
     backends:
     - serviceName: auth-keycloak
       servicePort: 80
