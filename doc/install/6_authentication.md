@@ -23,7 +23,7 @@ spec:
       - /redirect_uri
     backends:
     - serviceName: httpecho
-      servicePort: 80
+      servicePort: 8080
     plugins:
     - name: openid-connect
       enable: true
