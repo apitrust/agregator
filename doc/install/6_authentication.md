@@ -35,4 +35,5 @@ unset KC_CLIENT_ID
 unset KC_CLIENT_SECRET
 unset KC_DISCOVERY_ENDPOINT
 unset KC_REALM
+
 ```
