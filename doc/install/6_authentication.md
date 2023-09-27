@@ -27,4 +27,9 @@ spec:
         access_token_in_authorization_header: true
         ssl_verify: false
 EOF
+
+unset KC_CLIENT_ID
+unset KC_CLIENT_SECRET
+unset KC_DISCOVERY_ENDPOINT
+unset KC_REALM
 ```
