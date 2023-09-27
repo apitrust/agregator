@@ -1,11 +1,12 @@
 ```
-URI=https://e80f6094-fb56-47ed-ab3b-89a9d2d7ff02-10-244-4-251-80.spch.r.killercoda.com
+URI=https://e7564c19-3c6a-4616-a846-1a33d7ee07de-10-244-5-172-80.spch.r.killercoda.com
 LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
 KC_CLIENT_SECRET=eqRxjnONoSlS4nohgsHo5V1d43FCkRCv
 KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
+
 ```
 ```
 kubectl apply -f - <<EOF
@@ -31,7 +32,8 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: /callback
+        access_token_in_authorization_header: true
+        redirect_uri: "/redirect_uri"
 EOF
 
 ```
