@@ -21,7 +21,7 @@ spec:
     match:
       paths:
       - /auth
-      - /redirect_uri
+      - /auth/*
     backends:
     - serviceName: httpecho
       servicePort: 8080
@@ -34,7 +34,7 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: /auth
+        redirect_uri: /auth/redirect_uri
 EOF
 
 ```
