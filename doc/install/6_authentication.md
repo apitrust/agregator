@@ -35,10 +35,6 @@ spec:
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
         redirect_uri: /auth
-    - name: file-logger
-      enable: true
-      config:
-        path: logs/vve.log
 EOF
 
 ```
