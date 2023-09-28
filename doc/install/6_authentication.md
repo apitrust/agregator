@@ -64,5 +64,4 @@ spec:
         ssl_verify: false
 EOF
 
-
 ```
