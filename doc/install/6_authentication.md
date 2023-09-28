@@ -33,7 +33,6 @@ spec:
         client_secret: ${KC_CLIENT_SECRET}
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
-        introspection_endpoint: ${KC_INTRO_ENDPOINT}
         realm: ${KC_REALM}
         redirect_uri: /auth
     - name: file-logger
