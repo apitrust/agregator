@@ -11,7 +11,6 @@ helm install apisix charts/apisix --create-namespace --namespace apisix \
   --set admin.credentials.admin=${APISIX_ADMIN_KEY} \
   --set admin.credentials.viewer=${APISIX_VIEWER_KEY} \
   --set gateway.http.containerPort=80 \
-  --set gateway.http.servicePort=9580 \
   --set apisix.readinessProbe.tcpSocket.port=80
 
 helm install apisix-ingress-controller charts/apisix-ingress-controller --namespace apisix \
