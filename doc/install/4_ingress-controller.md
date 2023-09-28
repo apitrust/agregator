@@ -39,5 +39,8 @@ EOF
 
 ```
 ```
+kubectl get -n apisix svc/apisix-gateway
+```
+```
 kubectl port-forward -n apisix svc/apisix-gateway --address 0.0.0.0 80
 ```
