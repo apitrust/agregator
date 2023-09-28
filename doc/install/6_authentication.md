@@ -35,7 +35,7 @@ spec:
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         introspection_endpoint: ${KC_INTRO_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: /redirect_uri
+        redirect_uri: /auth
     - name: file-logger
       enable: true
       config:
