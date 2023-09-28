@@ -1,5 +1,5 @@
 ```
-URI=https://357bab28-3333-497c-b7d1-4da2bf8c4186-10-244-5-144-80.spch.r.killercoda.com
+URI=https://b7c2c1d0-2c84-4bd9-a8c4-4c13cbd25689-10-244-5-59-80.spch.r.killercoda.com
 LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
@@ -33,7 +33,7 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: https://127.0.0.1:9080/redirect_uri
+        redirect_uri: /redirect_uri
     - name: file-logger
       enable: true
       config:
