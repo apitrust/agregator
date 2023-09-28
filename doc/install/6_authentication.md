@@ -3,7 +3,7 @@ URI=https://b7c2c1d0-2c84-4bd9-a8c4-4c13cbd25689-10-244-5-59-80.spch.r.killercod
 LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
-KC_CLIENT_SECRET=wM2fOY3fK4EgVtgwf2hzAGvzy0hFbeCw
+KC_CLIENT_SECRET=aarDa82tH6vHCkA4gXI6o2dEZDrlVK6A
 KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 
