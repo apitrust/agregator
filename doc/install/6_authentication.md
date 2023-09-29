@@ -45,6 +45,7 @@ spec:
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
         redirect_uri: /anything/redirect_uri
+        access_token_in_authorization_header: true
 EOF
 
 ```
