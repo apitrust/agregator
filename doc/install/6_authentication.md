@@ -44,7 +44,7 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: ${URI}:443/anything/redirect_uri
+        redirect_uri: /anything/redirect_uri
         access_token_in_authorization_header: true
 EOF
 
