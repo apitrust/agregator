@@ -12,6 +12,18 @@ KC_INTRO_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token/introspect
 ```
 kubectl apply -f - <<EOF
 apiVersion: apisix.apache.org/v2
+kind: ApisixUpstream
+metadata:
+  name: httpbin-upstream
+spec:
+  externalNodes:
+  - type: Domain
+    name: httpbin.org
+EOF
+```
+```
+kubectl apply -f - <<EOF
+apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
   name: httpecho1-route-auth
@@ -20,11 +32,9 @@ spec:
   - name: httpecho1-auth
     match:
       paths:
-      - /auth
-      - /auth/*
-    backends:
-    - serviceName: httpecho
-      servicePort: 8080
+      - /anything/*
+    upstreams:
+    - name: httpbin-upstream
     plugins:
     - name: openid-connect
       enable: true
@@ -34,7 +44,7 @@ spec:
         discovery: ${KC_DISCOVERY_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        redirect_uri: ${URI}/auth/redirect_uri
+        redirect_uri: /anything/redirect_uri
 EOF
 
 ```
