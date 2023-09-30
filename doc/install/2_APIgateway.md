@@ -1,6 +1,7 @@
 APISIX + APISIX-ingress
 ```
 git clone https://github.com/apache/apisix-helm-chart.git
+# git clone https://github.com/kodxxl/apisix-helm-chart.git
 cd apisix-helm-chart/
 
 APISIX_ADMIN_KEY=$(dd if=/dev/urandom count=1 status=none | md5sum | cut -d " " -f1)
