@@ -7,7 +7,10 @@ cd apisix-helm-chart/
 APISIX_ADMIN_KEY=$(dd if=/dev/urandom count=1 status=none | md5sum | cut -d " " -f1)
 APISIX_VIEWER_KEY=$(dd if=/dev/urandom count=1 status=none | md5sum | cut -d " " -f1)
 
-helm install apisix charts/apisix --create-namespace --namespace apisix \
+kubectl create namespace apisix
+kubectl label namespace apisix istio-injection=enabled
+
+helm install apisix charts/apisix --namespace apisix \
   --set admin.allow.ipList="{0.0.0.0/0, ::/64}" \
   --set admin.credentials.admin=${APISIX_ADMIN_KEY} \
   --set admin.credentials.viewer=${APISIX_VIEWER_KEY}
