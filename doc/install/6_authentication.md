@@ -37,7 +37,7 @@ spec:
     - name: httpbin-upstream
     plugins:
     - name: openid-connect
-      enable: true
+      enable: false
       config:
         client_id: ${KC_CLIENT_ID}
         client_secret: ${KC_CLIENT_SECRET}
