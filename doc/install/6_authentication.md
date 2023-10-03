@@ -7,7 +7,7 @@ KC_CLIENT_SECRET=xT08cMDQwAv0k6bzB2S30JQ5k0TMSafx
 KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 KC_INTRO_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token/introspect
-KC_LOGOUT=/anything/logout
+KC_LOGOUT=/auth/logout
 KC_POST_LOGOUT=/anything/bb
 
 ```
@@ -35,6 +35,8 @@ spec:
   - name: httpecho1-auth
     match:
       paths:
+      - /logout
+      - /auth/logout
       - /anything/*
     upstreams:
     - name: httpbin-upstream
