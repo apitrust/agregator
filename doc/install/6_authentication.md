@@ -7,8 +7,8 @@ KC_CLIENT_SECRET=xT08cMDQwAv0k6bzB2S30JQ5k0TMSafx
 KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 KC_INTRO_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token/introspect
-KC_LOGOUT=${URI}/realms/apisix/protocol/openid-connect/logout
-KC_POST_LOGOUT=${URI}/anything/logout
+KC_LOGOUT=/anything/logout
+KC_POST_LOGOUT=/anything/bb
 
 ```
 ```
