@@ -7,6 +7,8 @@ KC_CLIENT_SECRET=xT08cMDQwAv0k6bzB2S30JQ5k0TMSafx
 KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 KC_INTRO_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token/introspect
+KC_LOGOUT=${URI}/realms/apisix/protocol/openid-connect/logout
+KC_POST_LOGOUT=${URI}/anything/logout
 
 ```
 ```
@@ -48,6 +50,8 @@ spec:
         realm: ${KC_REALM}
         access_token_in_authorization_header: true
         redirect_uri: /anything/redirect_uri
+        logout_path: ${KC_LOGOUT}
+        post_logout_redirect_uri: ${KC_POST_LOGOUT}
 EOF
 
 ```
