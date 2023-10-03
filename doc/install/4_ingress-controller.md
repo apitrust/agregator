@@ -32,6 +32,7 @@ spec:
       - /admin/*
       - /resources/*
       - /realms/*
+      - /welcome-content/*
     backends:
        - serviceName: auth-keycloak
          servicePort: 80
