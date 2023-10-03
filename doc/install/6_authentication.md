@@ -43,6 +43,7 @@ spec:
         client_id: ${KC_CLIENT_ID}
         client_secret: ${KC_CLIENT_SECRET}
         discovery: ${KC_DISCOVERY_ENDPOINT}
+        introspection_endpoint: ${KC_INTRO_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
         access_token_in_authorization_header: true
