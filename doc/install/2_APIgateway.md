@@ -15,7 +15,6 @@ helm install apisix charts/apisix --namespace apisix \
   --set admin.credentials.admin=${APISIX_ADMIN_KEY} \
   --set admin.credentials.viewer=${APISIX_VIEWER_KEY} \
   --set gateway.externalTrafficPolicy=Local \
-# --set dns.resolvers="{10.47.96.11}" \
   --set gateway.type=LoadBalancer \
   --set ingress-controller.config.ingressPublishService=apisix-gateway
 
