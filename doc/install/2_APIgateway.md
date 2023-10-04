@@ -1,5 +1,3 @@
-APISIX + APISIX-ingress
-```
 git clone https://github.com/apache/apisix-helm-chart.git
 # git clone https://github.com/kodxxl/apisix-helm-chart.git
 cd apisix-helm-chart/
@@ -15,7 +13,9 @@ helm install apisix charts/apisix --namespace apisix \
   --set admin.credentials.admin=${APISIX_ADMIN_KEY} \
   --set admin.credentials.viewer=${APISIX_VIEWER_KEY} \
   --set gateway.externalTrafficPolicy=Local \
-  --set dns.resolvers="{10.47.96.11}"
+# --set dns.resolvers="{10.47.96.11}" \
+  --set gateway.type=LoadBalancer \
+  --set ingress-controller.config.ingressPublishService=apisix-gateway
 
 helm install apisix-ingress-controller charts/apisix-ingress-controller --namespace apisix \
   --set config.apisix.adminKey=${APISIX_ADMIN_KEY} \
@@ -25,5 +25,3 @@ helm install apisix-ingress-controller charts/apisix-ingress-controller --namesp
 
 unset APISIX_ADMIN_KEY
 unset APISIX_VIEWER_KEY
-
-```
