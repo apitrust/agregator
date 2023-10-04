@@ -1,3 +1,5 @@
+APISIX + APISIX-ingress
+```
 git clone https://github.com/apache/apisix-helm-chart.git
 # git clone https://github.com/kodxxl/apisix-helm-chart.git
 cd apisix-helm-chart/
@@ -25,3 +27,5 @@ helm install apisix-ingress-controller charts/apisix-ingress-controller --namesp
 
 unset APISIX_ADMIN_KEY
 unset APISIX_VIEWER_KEY
+
+```
