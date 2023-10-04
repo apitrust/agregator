@@ -35,7 +35,7 @@ metadata:
 spec:
   externalNodes:
   - type: Domain
-    name: httpbin.org/anything/
+    name: httpbin.org
 EOF
 
 ```
@@ -50,7 +50,7 @@ spec:
   - name: httpecho1
     match:
       paths:
-      - /echo
+      - /anything/echo
     upstreams:
     - name: httpbin-upstream
 EOF
