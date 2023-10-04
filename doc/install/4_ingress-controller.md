@@ -1,4 +1,32 @@
 ```
+kubectl get -n apisix svc/apisix-gateway
+```
+```
+kubectl port-forward -n apisix svc/apisix-gateway --address 0.0.0.0 80
+```
+```
+kubectl apply -n keycloak -f - <<EOF
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
+metadata:
+  name: keycloak1-route
+spec:
+  http:
+  - name: keycloak1
+    match:
+      paths:
+      - /
+      - /admin/*
+      - /resources/*
+      - /realms/*
+      - /welcome-content/*
+    backends:
+       - serviceName: auth-keycloak
+         servicePort: 80
+EOF
+
+```
+```
 kubectl apply -f - <<EOF
 apiVersion: apisix.apache.org/v2
 kind: ApisixUpstream
@@ -29,30 +57,20 @@ EOF
 
 ```
 ```
-kubectl apply -n keycloak -f - <<EOF
+kubectl apply -f - <<EOF
 apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
-  name: keycloak1-route
+  name: httpecho1-route
 spec:
   http:
-  - name: keycloak1
+  - name: httpecho1
     match:
       paths:
-      - /
-      - /admin/*
-      - /resources/*
-      - /realms/*
-      - /welcome-content/*
+      - /echo
     backends:
-       - serviceName: auth-keycloak
-         servicePort: 80
+       - serviceName: httpecho
+         servicePort: 8080
 EOF
 
-```
-```
-kubectl get -n apisix svc/apisix-gateway
-```
-```
-kubectl port-forward -n apisix svc/apisix-gateway --address 0.0.0.0 80
 ```
