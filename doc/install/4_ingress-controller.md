@@ -2,7 +2,7 @@
 kubectl get -n apisix svc/apisix-gateway
 ```
 ```
-kubectl port-forward -n apisix svc/apisix-gateway --address 0.0.0.0 80
+kubectl port-forward -n apisix svc/apisix-gateway --address 0.0.0.0 9099:80
 ```
 ```
 kubectl apply -n keycloak -f - <<EOF
