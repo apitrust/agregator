@@ -14,19 +14,6 @@ KC_POST_LOGOUT=/echo
 ```
 kubectl apply -f - <<EOF
 apiVersion: apisix.apache.org/v2
-kind: ApisixUpstream
-metadata:
-  name: httpbin-upstream
-spec:
-  externalNodes:
-  - type: Domain
-    name: httpbin.org
-EOF
-
-```
-```
-kubectl apply -f - <<EOF
-apiVersion: apisix.apache.org/v2
 kind: ApisixRoute
 metadata:
   name: httpecho1-route-auth
