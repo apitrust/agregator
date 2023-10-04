@@ -1,4 +1,16 @@
+```
+kubectl apply -f - <<EOF
+apiVersion: apisix.apache.org/v2
+kind: ApisixUpstream
+metadata:
+  name: httpbin-upstream
+spec:
+  externalNodes:
+  - type: Domain
+    name: httpbin.org
+EOF
 
+```
 ```
 kubectl apply -f - <<EOF
 apiVersion: apisix.apache.org/v2
@@ -11,9 +23,8 @@ spec:
     match:
       paths:
       - /echo
-    backends:
-       - serviceName: httpecho
-         servicePort: 8080
+    upstreams:
+    - name: httpbin-upstream
 EOF
 
 ```
