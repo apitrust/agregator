@@ -1,5 +1,5 @@
 ```
-URI=http://scansible:8099
+URI=http://scansible:9080
 LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
