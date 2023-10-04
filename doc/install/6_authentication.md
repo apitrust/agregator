@@ -1,5 +1,5 @@
 ```
-URI=http://10.47.96.156:9080
+URI=http://10.47.96.156
 LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
