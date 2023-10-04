@@ -24,7 +24,8 @@ spec:
       paths:
       - /logout
       - /auth/logout
-      - /anything/*
+      - /anything/login
+      - /anything/info
     upstreams:
     - name: httpbin-upstream
     plugins:
