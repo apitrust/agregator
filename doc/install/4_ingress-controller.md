@@ -35,7 +35,7 @@ metadata:
 spec:
   externalNodes:
   - type: Domain
-    name: httpbin.org
+    name: httpbin.org/anything/
 EOF
 
 ```
