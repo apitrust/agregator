@@ -39,7 +39,7 @@ spec:
         introspection_endpoint: ${KC_INTRO_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        access_token_in_authorization_header: false
+        set_access_token_header: false
         redirect_uri: /anything/redirect_uri
         logout_path: ${KC_LOGOUT}
         post_logout_redirect_uri: ${KC_POST_LOGOUT}
