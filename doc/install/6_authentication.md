@@ -1,9 +1,9 @@
 ```
-URI=http://scansible:9080
+URI=https://25824aca-8d32-4927-8973-1295a4893db8-10-244-4-159-80.spch.r.killercoda.com
 LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
-KC_CLIENT_SECRET=k5WDPClSjKi3BqGlboIWOyOb9oJHNJNX
+KC_CLIENT_SECRET=HbbYIBLT0aTEMiTKebgRoJXXKfjj2HeA
 KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 KC_INTRO_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token/introspect
@@ -39,7 +39,7 @@ spec:
         introspection_endpoint: ${KC_INTRO_ENDPOINT}
         token_endpoint: ${KC_TOKEN_ENDPOINT}
         realm: ${KC_REALM}
-        access_token_in_authorization_header: true
+        access_token_in_authorization_header: false
         redirect_uri: /anything/redirect_uri
         logout_path: ${KC_LOGOUT}
         post_logout_redirect_uri: ${KC_POST_LOGOUT}
