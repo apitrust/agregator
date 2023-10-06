@@ -6,3 +6,12 @@ chmod 700 get_helm.sh
 mv /usr/local/bin/helm /usr/bin/helm
  
 ```
+```
+apt install nginx -y
+kubectl get svc/apisix-gateway -n apisix
+vi /etc/nginx/sites-enabled/default
+
+```
+```
+systemctl restart nginx.service
+```
