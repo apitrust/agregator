@@ -1,9 +1,8 @@
 ```
-URI=https://25824aca-8d32-4927-8973-1295a4893db8-10-244-4-159-80.spch.r.killercoda.com
-LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
+URI=
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
-KC_CLIENT_SECRET=HbbYIBLT0aTEMiTKebgRoJXXKfjj2HeA
+KC_CLIENT_SECRET=
 KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 KC_INTRO_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token/introspect
