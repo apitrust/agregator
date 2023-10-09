@@ -1,6 +1,15 @@
 Kong + Kong Ingress Controller
 ```
+helm repo add kong https://charts.konghq.com
+helm repo update
 
+kubectl create namespace kong 
+kubectl label namespace kong istio-injection=enabled
+
+helm install kong/ingress --namespace kong --generate-name
+
+helm install kong/kong --namespace kong --generate-name \
+  --set proxy.type=NodePort
 
 ```
 
