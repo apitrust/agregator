@@ -1,9 +1,8 @@
 ```
-URI=http://scansible:9080
-LOCAL_URI=http://auth-keycloak.keycloak.svc.cluster.local
+URI=
 KC_REALM=apisix
 KC_CLIENT_ID=apisix1
-KC_CLIENT_SECRET=k5WDPClSjKi3BqGlboIWOyOb9oJHNJNX
+KC_CLIENT_SECRET=
 KC_DISCOVERY_ENDPOINT=${URI}/realms/apisix/.well-known/openid-configuration
 KC_TOKEN_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token
 KC_INTRO_ENDPOINT=${URI}/realms/apisix/protocol/openid-connect/token/introspect

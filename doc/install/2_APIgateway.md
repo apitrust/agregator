@@ -14,8 +14,7 @@ helm install apisix charts/apisix --namespace apisix \
   --set admin.allow.ipList="{0.0.0.0/0, ::/64}" \
   --set admin.credentials.admin=${APISIX_ADMIN_KEY} \
   --set admin.credentials.viewer=${APISIX_VIEWER_KEY} \
-  --set gateway.externalTrafficPolicy=Local \
-  --set dns.resolvers="{10.47.96.11}"
+  --set gateway.externalTrafficPolicy=Local 
 
 helm install apisix-ingress-controller charts/apisix-ingress-controller --namespace apisix \
   --set config.apisix.adminKey=${APISIX_ADMIN_KEY} \
