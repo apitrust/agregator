@@ -1,3 +1,10 @@
+Kong Ingress Controller Ingresses
+```
+
+```
+
+
+APISIX Routes
 ```
 kubectl get -n apisix svc/apisix-gateway
 ```
